@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex; 
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-image: url("wave-haikei.svg");
+    width: 100vw;
+    background: #2720DF;
+}
+
+.first_container{
+    /* border: 1px solid red; */
+    border-radius: 10px;
+    background: #D8DF20;
+    box-shadow: 4px 2px 14px 4px #D8DF20;
+    -webkit-box-shadow: 4px 2px 14px 4px #D8DF20;
+    -moz-box-shadow: 4px 2px 14px 4px #D8DF20;
+    padding: 2em;
+    text-align: center;
+    width: 70%;
+}
+
+h1{
+    color: black;
+    /* margin-bottom: .8em; */
+    font-weight: 1000;
+}
+
+.first_container h2{
+    font-size: 1.5rem;
+}
+
+.first_container button{
+    border: none;
+    padding: .8em 1.9em;
+    margin-top: 1.1em;
+    background-color: #2720DF;
+    color: white;
+    border-radius: 5px;
+}
+
+#error_message{
+    margin-bottom: 1em;
+    float: left;
+    padding: .8em;
+    color: white;
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.second_container{
+    border-radius: 10px;
+    background: #D8DF20;
+    box-shadow: 4px 2px 14px 4px #D8DF20;
+    -webkit-box-shadow: 4px 2px 14px 4px #D8DF20;
+    -moz-box-shadow: 4px 2px 14px 4px #D8DF20;
+    padding: 2em;
+    text-align: center;
+    width: 70%;
+}
+
+.second_container h1{
+    margin-bottom: .5em;
+}
+.name_container{
+    display: flex;
+    gap: 1em;
+}
+.mobile{
+    margin-left: -.6em;
+}
+
+.buttons{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.buttons button{
+    border: none;
+    padding: .8em 1.9em;
+    background-color: #2720DF;
+    color: white;
+    border-radius: 5px;
+}
+
+.second_container input{
+    -moz-appearance: textfield;
+}
+
+#finalResult{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.3em;
+}

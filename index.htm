@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Checker</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="container first_container" id="pre-admission" style="display: block;">
+    <h1>Konoha University Admission Checker</h1>
+    <h2>Come and see if you are valid for admission into the prestigious Konoha University</h2>
+    <p>Before you check your admission, note the following:</p>
+    <ul>
+      <li>You must have a JAMB Score of 180 and above.</li>
+      <li>You must have a Post Utme Score of 12 and above.</li>
+      <li>You must be 16 years and above</li>
+      <li>Admission will be awarded depending on your states</li>
+      <li>Our catchment states are all South West states, Edo and Kogi</li>
+      <li>You must not have sat for Olevel more than once.</li>
+      <li>You must have 5 credits and above in your OLevel Grades.</li>
+      <li>Make sure you check each input you submit really well.</li>
+    </ul>
+    <p>Having verified that you meet the following requirements, let's start checking your eligibility.</p>
+    <button id="predivbutton">Check Admission</button>
+  </div>
+
+  
+
+  <!-- ADD PREVIOUS BUTTON TOO -->
+  <!-- PUT A PRE DIV TO SEE IF THEY ARE QUALIFIED ADMISSION -->
+
+  <div id="error_message"></div>
+
+  <div class="container row second_container" style="display: none;" id="firstContainer">
+    <h1>Personal Info</h1>
+    <div class="name_container">
+      <div class="form-floating mb-3 col-md-6">
+        <input type="text" class="form-control" id="first_name" placeholder="First Name">
+        <label for="firstName">First Name</label>
+      </div>
+      <div class="form-floating mb-3 col-md-6">
+        <input type="text" class="form-control" id="second_name" placeholder="Last Name">
+        <label for="lastName">Last Name</label>
+      </div>
+    </div>
+    <div class="name_container">
+      <div class="form-floating mb-3 col-md-6">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        <label for="email">Email address</label>
+      </div>
+      <div class="form-floating mb-3 col-md-6">
+        <input type="date" class="form-control" id="date" placeholder="Date Of Birth">
+        <label for="date_of_birth">Date Of Birth</label>
+      </div>  
+    </div>
+    <div class="name_container">
+      <div class="form-floating mb-3 col-md-4">
+        <select class="form-select" id="dropDownGender">
+        </select>
+        <label for="Gender">Gender</label>
+      </div>
+      <div class="form-floating mb-3 col-md-4">
+        <select class="form-select" id="dropDownsOG">
+        </select>
+        <label for="state_of_origin">State Of Origin</label>
+      </div>
+    <div class="form-floating col-md-4 mobile">
+      <input type="text" class="form-control" id="mobile_number" placeholder="Mobile Number">
+      <label for="mobileNumber">Mobile Number</label>
+    </div>
+    </div>
+    <div class="buttons">
+      <button id="prev_button">Previous Stage</button>
+      <button id="button">Next Stage</button>
+    </div>
+    
+  </div>
+
+  <div class="container container2 second_container row" style="display: none;" id="secondContainer">
+    <h1>UME Scores</h1>
+    <div class="name_container">
+      <div class="form-floating col-md-6">
+        <input type="number" class="form-control" id="jamb_score" placeholder="Jamb Score">
+        <label for="jambScore">Jamb Score</label>
+      </div>
+      <div class="form-floating col-md-6">
+        <input type="number" class="form-control" id="post_utme_score" placeholder="Post Utme Score">
+        <label for="pUtmeScore">Post Utme Score</label>
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="prev_admission_button">Previous Stage</button>
+      <button id="second_button">Next Stage</button>
+    </div>
+
+      
+  </div>
+
+  <div class="container container3 second_container row" style="display: none;" id="thirdContainer">
+    <h1>OLevel Results</h1>
+    <div class="form-floating">
+      <input type="number" class="form-control" id="one_sitting" placeholder="OLevel One Sitting">
+      <label for="olevel_one_sitting">One Sitting</label>
+    </div>
+    <div class="name_container mt-3">
+      <div class="form-floating mb-3 col-md-6">
+        <select class="form-select ddlOlevelGrade">
+        </select>
+        <label for="olevel_english">English Language</label>
+      </div>
+      <div class="form-floating mb-3 col-md-6">
+        <select class="form-select ddlOlevelGrade">
+        </select>
+        <label for="olevel_maths">Mathematics</label>
+      </div>
+    </div>
+
+    <div class="name_container mt-3">
+      <div class="form-floating mb-3 col-md-6">
+        <select class="form-select ddlOlevelSubject">
+        </select>
+        <label for="olevel_subject1">Olevel Subject 1</label>
+      </div>
+        <div class="form-floating mb-3 col-md-6">
+          <select class="form-select ddlOlevelGrade"></select>
+          <label for="olevel_subject1grade">Olevel Subject 1 Grade</label>
+        </div>
+    </div>
+
+    <div class="name_container mt-3">
+      <div class="form-floating mb-3 col-md-6">
+        <select class="form-select ddlOlevelSubject">
+        </select>
+        <label for="olevel_subject2">Olevel Subject 2</label>
+      </div>
+        <div class="form-floating mb-3 col-md-6">
+          <select class="form-select ddlOlevelGrade"></select>
+          <label for="olevel_subject2grade">Olevel Subject 2 Grade</label>
+        </div>
+    </div>
+
+    <div class="name_container mt-3">
+      <div class="form-floating mb-3 col-md-6">
+        <select class="form-select ddlOlevelSubject">
+        </select>
+        <label for="olevel_subject3">Olevel Subject 3</label>
+      </div>
+        <div class="form-floating mb-3 col-md-6">
+          <select class="form-select ddlOlevelGrade"></select>
+          <label for="olevel_subject3grade">Olevel Subject 3 Grade</label>
+        </div>
+    </div>
+
+    <div class="buttons">
+      <button id="third_prev_button">Previous Stage</button>
+    <button id="third_button">Check Admission</button>
+    </div>
+
+  </div>
+
+  <div class="container container4 second_container" style="display: none;" id="fourthContainer">
+  <div id="finalResult"></div>
+  <div class="buttons">
+    <button id="start_again">Check Again</button>
+  </div>
+ 
+  </div>
+
+    <script defer src="js/bootstrap.min.js"></script>
+    <script defer src="index.js"></script>
+</body>
+</html>
